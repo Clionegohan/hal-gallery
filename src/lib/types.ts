@@ -1,7 +1,7 @@
-export type illustration = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  imageUrl: string;
+export type Illustration = {
+  readonly id: string;
+  readonly slug: string;
+  readonly name: string;
+  readonly descriptign: string;
+  readonly imageurl: string;
 };
