@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
   <html lang="ja">
-    <body className="mx-auto maz-w-5xl bg-gray-50 text-gray-900">
+    <body className="mx-auto max-w-5xl bg-gray-50 text-gray-900">
       <header className="border-b bg-white px-4 py-3 font-semibold">
         <div>
           hal gallery
