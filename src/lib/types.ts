@@ -1,4 +1,4 @@
-export type Illustration = {
+export type Artwork = {
   readonly id: string;
   readonly slug: string;
   readonly name: string;
