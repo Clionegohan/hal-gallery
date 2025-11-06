@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getArtworksBySlug, getAllArtworks } from "@/lib/artworks";
+import { getArtworkBySlug, getAllArtworks } from "@/lib/artworks";
 
 export async function generateStaticParams() {
   const artworks = getAllArtworks();
@@ -15,7 +15,7 @@ export default async function ArtworkPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const artwork = getArtworksBySlug(slug);
+  const artwork = getArtworkBySlug(slug);
 
   if (!artwork) {
     notFound();
