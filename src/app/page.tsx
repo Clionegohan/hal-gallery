@@ -1,22 +1,27 @@
+"use client";
+import Image from "next/image";
+
 import type { Artwork } from "@/lib/types";
 import { getAllArtworks } from "@/lib/artworks";
 
-export default function HomePage(): JSX.Element {
+export default function HomePage() {
   const artworks: readonly Artwork[] = getAllArtworks();
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-white">Art</h1>
+      <h1 className="text-3xl font-bold text-white">Gallery</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {artworks.map((artwork: Artwork) => (
           <div
             key={artwork.id}
-            className="bg-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            className="bg-zinc-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
           >
-            <img
+            <Image
               src={artwork.imageUrl}
               alt={artwork.name}
+              width={400}
+              height={256}
               className="w-full h-64 object-cover"
             />
             <div className="p-4">
