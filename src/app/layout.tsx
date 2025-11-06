@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "hal-gallery",
   description:
@@ -14,14 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="mx-auto max-w-5xl bg-black text-white">
-        <header className="border-b bg-black px-4 py-3 font-semibold">
-          <div>hal gallery</div>
-        </header>
-        <main className="px-4 py-8">{children}</main>
-        <footer className="border-t bg-black px-4 py-6 text-gray-400">
-          <div>© {new Date().getFullYear()} hal gallery</div>
-        </footer>
+      <body className="mx-auto max-w-5xl bg-black">
+        <Header />
+        <main className="px-4 pt-20 pb-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );
