@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="mx-auto max-w-5xl bg-black">
+      <body className="bg-black">
         <Header />
-        <main className="px-4 pt-20 pb-16">{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>
